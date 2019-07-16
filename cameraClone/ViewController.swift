@@ -29,7 +29,15 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
             print("カメラは利用できません")
            }
     
-    @IBAction func SNSButtonAction(_ sender: Any) {
+        func SNSButtonAction(_ sender: Any) {
+            if let shareImage = pictureImage.image {
+               let shareItems = [shareImage]
+                let controller = UIActivityViewController(activityItems: shareItems ,
+                                                          applicationActivities: nil)
+                controller.popoverPresentationController?.sourceView = view
+                present(controller, animated: true, completion: nil)
+            }
+            
     }
         
         func imagePickerController(_ picker: UIImagePickerController , didFinishPickingMediaWithInfo
@@ -39,3 +47,4 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
         }
 }
 
+}
