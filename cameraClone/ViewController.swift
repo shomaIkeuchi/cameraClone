@@ -18,15 +18,37 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
     @IBOutlet weak var pictureImage: UIImageView!
     @IBAction func cameraButtonAction(_ sender: Any) {
         
+        let alertController = UIAlertController(title: "確認", message: "選択してください", preferredStyle: .actionSheet)
+        
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-            print("カメラは利用できます")
+        
+            let cameraAction = UIAlertAction(title: "カメラ", style: .default, handler: { (action:UIAlertAction) in
+                
+                let imagePickerController = UIImagePickerController()
+                imagePickerController.sourceType = .camera
+                imagePickerController.delegate = self
+                self.present(imagePickerController, animated: true, completion: nil)
+            })
             
-            let imagePickerController = UIImagePickerController()
-            imagePickerController.sourceType = .camera
-            imagePickerController.delegate = self
-            present(imagePickerController , animated: true, completion: nil)
-        } else {
-            print("カメラは利用できません")
+        alertController.addAction(cameraAction)
+        
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            
+                let photoLibraryAction = UIAlertAction(title: "フォトライブラリ", style: .default, handler: { (action:UIAlertAction) in
+                    
+                    let imagePickerController = UIImagePickerController()
+                    imagePickerController.sourceType = .photoLibrary
+                    imagePickerController.delegate = self
+                    self.present(imagePickerController, animated: true, completion: nil)
+                })
+        alertController.addAction(photoLibraryAction)
+            }
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        alertController.popoverPresentationController?.sourceView = view
+        present(alertController, animated: true, completion: nil)
+        
            }
     
         func SNSButtonAction(_ sender: Any) {
@@ -46,5 +68,6 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
             dismiss(animated: true, completion: nil)
         }
 }
+
 
 }
