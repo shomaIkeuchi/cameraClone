@@ -5,7 +5,6 @@
 //  Created by 池内将真 on 2019/07/15.
 //  Copyright © 2019 WAKUike. All rights reserved.
 //
-
 import UIKit
 
 @UIApplicationMain
