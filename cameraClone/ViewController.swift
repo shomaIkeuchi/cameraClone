@@ -51,23 +51,24 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
         
            }
     
+}
+
+    @IBAction func SNSButtonAction(_ sender: Any) {
+        
         func SNSButtonAction(_ sender: Any) {
             if let shareImage = pictureImage.image {
-               let shareItems = [shareImage]
-                let controller = UIActivityViewController(activityItems: shareItems ,
-                                                          applicationActivities: nil)
+                let shareItems = [shareImage]
+                let controller = UIActivityViewController(activityItems: shareItems ,applicationActivities: nil)
                 controller.popoverPresentationController?.sourceView = view
                 present(controller, animated: true, completion: nil)
             }
             
-    }
+        }
         
         func imagePickerController(_ picker: UIImagePickerController , didFinishPickingMediaWithInfo
             info: [UIImagePickerController.InfoKey : Any]){
             pictureImage.image = info[UIImagePickerController . InfoKey.originalImage] as? UIImage
             dismiss(animated: true, completion: nil)
         }
-}
-
-
+    }
 }
