@@ -67,8 +67,18 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
         
         func imagePickerController(_ picker: UIImagePickerController , didFinishPickingMediaWithInfo
             info: [UIImagePickerController.InfoKey : Any]){
-            pictureImage.image = info[UIImagePickerController . InfoKey.originalImage] as? UIImage
-            dismiss(animated: true, completion: nil)
+            
+            
+            captureImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            
+            dismiss(animated: true, completion: {
+                
+                self.performSegue(withIdentifier: "showEffectView", sender: nil)
+            })
         }
     }
+    
+    //次の画面遷移するときに渡す画像を格納する場所
+    var captureImage : UIImage?
+    
 }

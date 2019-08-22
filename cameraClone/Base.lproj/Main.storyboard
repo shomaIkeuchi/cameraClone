@@ -65,10 +65,94 @@
                     </view>
                     <connections>
                         <outlet property="pictureImage" destination="8bC-Xf-vdC" id="Yiu-2L-BdE"/>
+                        <segue destination="J39-8s-aPs" kind="show" identifier="showEffectView" id="TFH-bG-ieO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Effect View Controller-->
+        <scene sceneID="lsj-bo-TRw">
+            <objects>
+                <viewController id="J39-8s-aPs" customClass="EffectViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UnK-ni-XY2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rtP-Wg-m5G">
+                                <rect key="frame" x="16" y="74" width="382" height="578"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4of-YQ-4Wg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xn3-Ch-H42">
+                                <rect key="frame" x="16" y="682" width="382" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="XNc-zE-rLj"/>
+                                </constraints>
+                                <state key="normal" title="エフェクト">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="effectButtonAction:" destination="J39-8s-aPs" eventType="touchUpInside" id="8xB-xP-XS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mij-Bm-Vta">
+                                <rect key="frame" x="16" y="742" width="382" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UN6-6A-pg7"/>
+                                </constraints>
+                                <state key="normal" title="シェア">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shareButtonAction:" destination="J39-8s-aPs" eventType="touchUpInside" id="eRy-OR-75n"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23V-bP-EPf">
+                                <rect key="frame" x="16" y="802" width="382" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="coh-gl-tUe"/>
+                                </constraints>
+                                <state key="normal" title="閉じる">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonAction:" destination="J39-8s-aPs" eventType="touchUpInside" id="ciN-7o-dtL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rtP-Wg-m5G" firstAttribute="leading" secondItem="IVg-5M-ZO7" secondAttribute="leading" constant="16" id="1GU-uo-WD1"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="bottom" secondItem="23V-bP-EPf" secondAttribute="bottom" constant="30" id="7xs-mL-x3F"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="trailing" secondItem="23V-bP-EPf" secondAttribute="trailing" constant="16" id="Dng-2v-3O1"/>
+                            <constraint firstItem="23V-bP-EPf" firstAttribute="leading" secondItem="IVg-5M-ZO7" secondAttribute="leading" constant="16" id="Hzn-yt-Ntd"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="trailing" secondItem="rtP-Wg-m5G" secondAttribute="trailing" constant="16" id="KRU-br-qnD"/>
+                            <constraint firstItem="rtP-Wg-m5G" firstAttribute="top" secondItem="IVg-5M-ZO7" secondAttribute="top" constant="30" id="RWn-mF-GnN"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="trailing" secondItem="mij-Bm-Vta" secondAttribute="trailing" constant="16" id="Rvg-iI-PB5"/>
+                            <constraint firstItem="mij-Bm-Vta" firstAttribute="leading" secondItem="IVg-5M-ZO7" secondAttribute="leading" constant="16" id="YsB-6H-C5t"/>
+                            <constraint firstItem="23V-bP-EPf" firstAttribute="top" secondItem="mij-Bm-Vta" secondAttribute="bottom" constant="30" id="Z1J-qs-tfc"/>
+                            <constraint firstItem="mij-Bm-Vta" firstAttribute="top" secondItem="Xn3-Ch-H42" secondAttribute="bottom" constant="30" id="d5b-go-ieu"/>
+                            <constraint firstItem="Xn3-Ch-H42" firstAttribute="leading" secondItem="IVg-5M-ZO7" secondAttribute="leading" constant="16" id="g2D-Hd-A8U"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="trailing" secondItem="Xn3-Ch-H42" secondAttribute="trailing" constant="16" id="gXY-tP-P4d"/>
+                            <constraint firstItem="IVg-5M-ZO7" firstAttribute="trailing" secondItem="rtP-Wg-m5G" secondAttribute="trailing" constant="16" id="jtd-sr-vfu"/>
+                            <constraint firstItem="rtP-Wg-m5G" firstAttribute="leading" secondItem="IVg-5M-ZO7" secondAttribute="leading" constant="16" id="nHs-sn-I0n"/>
+                            <constraint firstItem="Xn3-Ch-H42" firstAttribute="top" secondItem="rtP-Wg-m5G" secondAttribute="bottom" constant="30" id="p1F-Y3-lQs"/>
+                            <constraint firstItem="rtP-Wg-m5G" firstAttribute="top" secondItem="IVg-5M-ZO7" secondAttribute="top" id="u1V-Ai-7Ud"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IVg-5M-ZO7"/>
+                    </view>
+                    <connections>
+                        <outlet property="effectimge" destination="rtP-Wg-m5G" id="Dn4-ru-Ddf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buk-9s-dkm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1504" y="42"/>
         </scene>
     </scenes>
 </document>

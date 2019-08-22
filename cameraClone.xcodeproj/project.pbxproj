@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19AFC8AB230EF6AE00656E35 /* EffetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AFC8AA230EF6AE00656E35 /* EffetViewController.swift */; };
 		19BA182E22DC76C500019FD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BA182D22DC76C500019FD1 /* AppDelegate.swift */; };
 		19BA183022DC76C500019FD1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19BA182F22DC76C500019FD1 /* ViewController.swift */; };
 		19BA183322DC76C500019FD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19BA183122DC76C500019FD1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19AFC8AA230EF6AE00656E35 /* EffetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffetViewController.swift; sourceTree = "<group>"; };
 		19BA182A22DC76C500019FD1 /* cameraClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cameraClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19BA182D22DC76C500019FD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19BA182F22DC76C500019FD1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				19BA182D22DC76C500019FD1 /* AppDelegate.swift */,
 				19BA182F22DC76C500019FD1 /* ViewController.swift */,
 				19BA183122DC76C500019FD1 /* Main.storyboard */,
+				19AFC8AA230EF6AE00656E35 /* EffetViewController.swift */,
 				19BA183422DC76C600019FD1 /* Assets.xcassets */,
 				19BA183622DC76C600019FD1 /* LaunchScreen.storyboard */,
 				19BA183922DC76C600019FD1 /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19AFC8AB230EF6AE00656E35 /* EffetViewController.swift in Sources */,
 				19BA183022DC76C500019FD1 /* ViewController.swift in Sources */,
 				19BA182E22DC76C500019FD1 /* AppDelegate.swift in Sources */,
 			);
@@ -439,7 +443,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga;
+				PRODUCT_BUNDLE_IDENTIFIER = aaaaaa.cameraClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ga;
+				PRODUCT_BUNDLE_IDENTIFIER = aaaaaa.cameraClone;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
