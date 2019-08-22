@@ -29,7 +29,7 @@ class EffetViewController: UIViewController {
     }
     */
 
-    @IBOutlet weak var effectimge: UIImageView!
+    @IBOutlet weak var effectImage: UIImageView!
     
     //エフェクト前画像
     //前の画像より画像を設定

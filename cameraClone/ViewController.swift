@@ -81,4 +81,12 @@ class ViewController: UIViewController , UINavigationControllerDelegate , UIImag
     //次の画面遷移するときに渡す画像を格納する場所
     var captureImage : UIImage?
     
+    override func prepare(for segue : UIStoryboardSegue, sender: Any?){
+        
+        if let nextViewController = segue.destination as? EffectViewController {
+            
+            nextViewController.originalImage = captureImage
+            
+        }
+    }
 }
